@@ -1,0 +1,98 @@
+@media (min-width: 768px) {
+  body {
+    margin-left: 30px;
+  }
+
+  .navbar__header {
+    margin-left: 16px;
+  }
+
+  .hidden_desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 1366px) {
+  body {
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .flex-container {
+    display: flex;
+  }
+
+  .flex-box1 {
+    position: relative;
+    width: 20%;
+    background-color: #fff;
+    height: 100%;
+    box-shadow: none;
+  }
+
+  .group {
+    width: 100%;
+  }
+  .align {
+    margin-left: 160px;
+    box-sizing: border-box;
+  }
+  .flex-box2 {
+    width: 80%;
+    margin-left: 50px;
+  }
+
+  .item_hide {
+    display: none;
+  }
+
+  .burger-close {
+    display: none;
+  }
+
+  .item-logo {
+    margin-left: -40%;
+  }
+
+  .last-child {
+    display: block;
+  }
+
+  .lang {
+    margin-left: 15px;
+  }
+
+  .item {
+    margin-left: 32px;
+  }
+  .repair,
+  .check-status {
+    text-decoration: none;
+  }
+
+  .menu__repair-logo::before {
+    content: 'Оставить заявку';
+    color: #1b1c21;
+    font-weight: 500;
+    vertical-align: 15px;
+    margin-right: 10px;
+  }
+  .check-status::before {
+    content: 'Статус ремонта';
+    color: #1b1c21;
+    font-weight: 500;
+    vertical-align: 15px;
+    margin-right: 10px;
+  }
+  .navbar__nav {
+    flex-wrap: wrap;
+    margin-left: 16px;
+    overflow-x: hidden;
+  }
+  .offer-width {
+    margin-left: 16px;
+  }
+  .swiper {
+    margin-right: 40px;
+  }
+}

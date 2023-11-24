@@ -1,0 +1,16 @@
+@import '../../node_modules/swiper/swiper-bundle.css';
+
+.swiper-pagination-bullet-active {
+  background-color: #989899;
+}
+.swiper-pagination {
+  position: relative;
+  margin-top: 5px;
+  background-color: $colorBody;
+}
+
+@media (min-width: 768px) {
+  .swiper-pagination {
+    display: none;
+  }
+}

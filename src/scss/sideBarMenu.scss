@@ -1,0 +1,144 @@
+.flex-container {
+  height: 100%;
+}
+
+.sidebar-menu_hiden {
+  display: none;
+}
+.flex-box1 {
+  padding-left: 10px;
+  margin-left: -16px;
+  background-color: $colorWhite;
+  min-height: 100vw;
+  overflow-y: auto;
+
+  .sidebar-menu__header {
+    padding-top: 23px;
+    margin-left: -16px;
+    padding-left: 0;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    margin-top: 0;
+    background-color: $colorWhite;
+  }
+  .sidebar-menu__list {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: -16px;
+    margin-top: 0;
+
+    .sidebar-menu__item {
+      margin-top: 32px;
+      font-weight: 500;
+      transition: 0.8s;
+      &:hover {
+        opacity: 0.6;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    }
+  }
+  .sidebar-menu__contacts {
+    margin-top: 0px;
+    padding-left: 15px;
+    margin-left: -15px;
+    .menu__contact {
+      margin-left: 16px;
+    }
+  }
+  .menu__button {
+    border: none;
+    background-color: $colorWhite;
+  }
+}
+
+.item_highlight:hover::before {
+  content: '';
+  position: absolute;
+  border-radius: 0 50% 50% 0;
+  background: #41f6d7;
+  width: 4px;
+  height: 32px;
+  left: 0px;
+}
+button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.sidebar-menu__info {
+  margin-left: 16px;
+  .sidebar-menu__number {
+    font-weight: 700;
+    font-size: 24px;
+  }
+}
+
+.lang {
+  margin-left: -24px;
+
+  .lang__btn {
+    border: none;
+    background-color: $colorWhite;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .ru {
+    margin-left: 40px;
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: 380px) {
+  .flex-box1 {
+    max-width: 400px;
+  }
+}
+@media (min-width: 768px) {
+  .flex-box1 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 320px;
+    height: 100%;
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
+      -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+    .sidebar-menu__contacts {
+      margin-top: 150px;
+    }
+    .item_highlight:hover::before {
+      left: 16px;
+    }
+  }
+  .highlight {
+    margin-left: -30px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .flex-container {
+    .sidebar-menu_hiden {
+      display: block;
+    }
+    .sidebar-menu__contacts {
+      margin-top: 250px;
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    .sidebar-menu__item {
+      margin-top: 20px;
+    }
+    .sidebar-menu__header {
+      margin-left: 40px;
+    }
+    .sidebar-menu__info {
+      margin-left: 15px;
+    }
+
+    .menu__contact {
+      margin-left: 15px;
+    }
+  }
+}

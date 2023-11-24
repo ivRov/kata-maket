@@ -1,0 +1,30 @@
+.offer-width {
+  width: 100%;
+  .offer__btn {
+    border: none;
+    background-color: $colorBody;
+    color: #1b1c21;
+    font-family: TT Lakes;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: $medium;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.4px;
+    text-align: left;
+
+    .offer__more {
+      display: inline;
+      vertical-align: -10px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .offer-width {
+    width: 64%;
+
+    .offer-text {
+      text-align: right;
+    }
+  }
+}
