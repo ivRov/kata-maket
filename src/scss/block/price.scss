@@ -4,6 +4,9 @@
   }
   .price__group {
     padding: 0;
+    @media (min-width: $screen-md) {
+      flex-direction: column;
+    }
     .price__element {
       display: flex;
       flex-direction: column;
@@ -13,6 +16,18 @@
       background: $colorWhite;
       padding-left: $px16;
       border: 1px solid $colorBorderElement;
+      @media (min-width: $screen-md) {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100% !important;
+        border: none;
+        &:not(:first-child)::after {
+          position: absolute;
+          content: '';
+          width: 95%;
+          border-bottom: 1px solid $colorBorderElement;
+        }
+      }
       .price_dinamic-mobile {
         color: $colorGray;
         font-family: TT Lakes;
@@ -20,10 +35,39 @@
         font-weight: 500;
         line-height: 16px; /* 114.286% */
         opacity: 0.7;
+        @media (min-width: $screen-md) {
+          display: none;
+        }
+      }
+    }
+    .price__element_width {
+      @media (min-width: $screen-md) {
+        width: 15%;
+        align-self: baseline;
+        &:first-child {
+          width: 40%;
+        }
+        .price__btn {
+          float: none;
+        }
       }
     }
     .price__element_hidden {
       display: none;
+      @media (min-width: $screen-md) {
+        display: flex;
+      }
+      p {
+        @media (min-width: $screen-md) {
+          width: 15%;
+          &:first-child {
+            width: 40%;
+          }
+          &:last-child {
+            width: 35%;
+          }
+        }
+      }
     }
     .price__btn {
       float: right;
@@ -49,47 +93,4 @@
 .goside {
   display: inline-block;
   vertical-align: -8px;
-}
-@media (min-width: 768px) {
-  .price {
-    .price__group {
-      flex-direction: column;
-      .price__element_hidden {
-        display: flex;
-        p {
-          width: 15%;
-          &:first-child {
-            width: 40%;
-          }
-          &:last-child {
-            width: 35%;
-          }
-        }
-      }
-      .price__element {
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100% !important;
-        .price_dinamic-mobile {
-          display: none;
-        }
-        .price__element_width {
-          width: 15%;
-          align-self: baseline;
-          &:first-child {
-            width: 40%;
-          }
-          .price__btn {
-            float: none;
-          }
-        }
-        &:not(:first-child)::after {
-          position: absolute;
-          content: '';
-          width: 95%;
-          border-bottom: 1px solid $colorBorderElement;
-        }
-      }
-    }
-  }
 }

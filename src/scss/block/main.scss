@@ -1,22 +1,42 @@
 .main {
   margin-top: 24px;
+  @media (min-width: $screen-md) {
+    display: flex;
+  }
   .about-us {
     margin-right: $px16;
     letter-spacing: 0.2px;
     line-height: 18px;
-    font-size: 14px;
     height: 90px;
     overflow: hidden;
+    @media (min-width: $screen-md) {
+      line-height: 20px;
+      letter-spacing: 0.2px;
+      height: 160px;
+      padding-inline: 24px;
+    }
   }
   .about-us_hidden {
     display: none;
+  }
+  .main__left {
+    @media (min-width: $screen-md) {
+      width: 49%;
+    }
   }
   .main__right {
     margin-left: $px-16;
     margin-block: $px16;
     min-width: 300px;
+    @media (min-width: $screen-md) {
+      width: 45%;
+    }
     .main-logo {
       width: 100%;
+      @media (min-width: $screen-md) {
+        margin-inline: 24px;
+        border-radius: 3%;
+      }
     }
   }
 }
@@ -32,26 +52,4 @@
   vertical-align: 5px;
   font-weight: 500;
   font-size: 16px;
-}
-
-@media (min-width: 768px) {
-  .main {
-    display: flex;
-  }
-  .about-us {
-    line-height: 20px;
-    letter-spacing: 0.2px;
-    height: 160px;
-    padding-inline: 24px;
-  }
-  .main__left {
-    width: 49%;
-  }
-  .main__right {
-    width: 45%;
-  }
-  .main-logo {
-    margin-inline: 24px;
-    border-radius: 3%;
-  }
 }
