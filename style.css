@@ -1384,11 +1384,10 @@ button:hover {
     width: 100vw;
     height: 130vw;
     background-color: #fff;
-    margin-left: 32px; }
+    margin-left: 16px; }
     @media (min-width: 768px) {
       .feedback .feedblock {
-        width: 320px;
-        margin-left: 16px; } }
+        width: 320px; } }
   .feedback .feedback__header {
     color: #1b1c21;
     font-family: TT Lakes;
