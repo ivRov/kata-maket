@@ -21,7 +21,8 @@
         justify-content: space-around;
         width: 100% !important;
         border: none;
-        &:not(:first-child)::after {
+        padding-inline: 16px;
+        &:not(:nth-child(-n + 2))::after {
           position: absolute;
           content: '';
           width: 95%;
@@ -54,17 +55,21 @@
     }
     .price__element_hidden {
       display: none;
+      background-color: $colorBody;
       @media (min-width: $screen-md) {
         display: flex;
       }
       p {
         @media (min-width: $screen-md) {
           width: 15%;
+          margin-left: 2px;
           &:first-child {
             width: 40%;
+            margin-left: 0;
           }
           &:last-child {
-            width: 35%;
+            width: 34%;
+            margin-left: 0;
           }
         }
       }
@@ -73,6 +78,9 @@
       float: right;
       margin-right: 5%;
       margin-top: -25px;
+      @media (min-width: 1000px) {
+        margin-left: 30%;
+      }
     }
   }
 }

@@ -5,7 +5,7 @@ body {
   font-family: Lakes;
   margin-left: $px16;
   @media (min-width: $screen-md) {
-    margin-left: 30px;
+    margin-inline: 24px;
     font-size: 1em;
   }
   @media (min-width: $screen-xl) {

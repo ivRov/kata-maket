@@ -1,18 +1,26 @@
 .header {
   margin-left: $px-16;
-
+  width: 105%;
+  @media (min-width: $screen-xl) {
+    width: 0;
+  }
   .header__menu {
     min-height: 87px;
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
     @media (min-width: $screen-md) {
-      margin-left: -20px;
+      margin-left: -1%;
+      padding-left: 3.5%;
+      flex-wrap: nowrap;
     }
     @media (min-width: $screen-xl) {
       background-color: $colorBody;
       position: absolute;
       right: 5%;
+    }
+    .menu__item {
+      margin: auto;
     }
 
     .logo {
@@ -24,11 +32,11 @@
         height: 32px;
         border-radius: 1px;
         background: $colorBorderElement;
-        margin-top: 12px;
-        margin-inline: 5%;
+        margin-left: 6vw;
+        margin-top: 10px;
       }
       @media (min-width: $screen-md) {
-        padding-right: 240px;
+        padding-right: 30vw;
         padding-left: 20px;
         &:after {
           display: none;
@@ -58,14 +66,13 @@
           border-radius: 1px;
           background: $colorBorderElement;
           margin-top: 5px;
-          margin-left: 3%;
+          margin-left: 2.6vw;
         }
       }
     }
 
     .item {
       @media (min-width: $screen-xl) {
-        margin-left: 32px;
       }
     }
   }

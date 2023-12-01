@@ -15,7 +15,7 @@ call.forEach(function (btn) {
     repair.classList.add('opacity')
     flexbox2.style.opacity = '0.5'
     header.classList.add('hidden')
-    if (width < 1366) {
+    if (window.innerWidth < 1366) {
       flexbox1.classList.add('sidebar-menu_hiden')
     }
   })

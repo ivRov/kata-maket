@@ -17,6 +17,9 @@
   }
   .feedback__burger-close {
     margin-top: 16px;
+    @media (min-width: $screen-sm) {
+      margin-left: -35%;
+    }
     @media (min-width: $screen-md) {
       position: absolute;
       margin-left: -65px;
@@ -27,10 +30,9 @@
     width: 100vw;
     height: 130vw;
     background-color: $colorWhite;
-    margin-left: 32px;
+    margin-left: 16px;
     @media (min-width: $screen-md) {
       width: 320px;
-      margin-left: 16px;
     }
   }
   .feedback__header {
@@ -83,9 +85,9 @@
   .feedback__confidential {
     font-size: 14px;
     max-width: 320px;
+    padding-inline: 4px;
     @media (min-width: $screen-sm) {
       margin-inline: auto;
-      padding-inline: 4px;
     }
   }
   .feedback_pink {

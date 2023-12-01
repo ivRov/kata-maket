@@ -36,20 +36,41 @@
     position: relative;
     width: 20%;
     background-color: $colorWhite;
-    height: 100%;
+    height: 125vw;
     box-shadow: none;
+  }
+  .menu__button {
+    border: none;
+    background-color: $colorWhite;
   }
 
   .sidebar-menu__header {
+    display: flex;
     padding-top: 23px;
-    margin-left: -16px;
     padding-left: 0;
-    box-sizing: border-box;
     margin-bottom: 30px;
     margin-top: 0;
     background-color: $colorWhite;
-    @media (min-width: $screen-xl) {
-      margin-left: 40px;
+    .menu__item {
+      width: 25%;
+      @media (min-width: $screen-md) {
+        &:first-child {
+          margin-left: 16px;
+        }
+      }
+      @media (min-width: $screen-xl) {
+        &:first-child {
+          width: 10%;
+          margin-left: 0;
+        }
+        &:last-child {
+          width: 50%;
+          margin-left: 40%;
+        }
+      }
+    }
+    .item__search {
+      margin-left: 30%;
     }
   }
 
@@ -95,15 +116,6 @@
       margin-left: 16px;
     }
   }
-  .menu__button {
-    border: none;
-    background-color: $colorWhite;
-  }
-  .item-logo {
-    @media (min-width: $screen-xl) {
-      margin-left: -40%;
-    }
-  }
 }
 
 .item_highlight:hover::before {
@@ -136,9 +148,7 @@ button:hover {
 
 .lang {
   margin-left: -24px;
-  @media (min-width: $screen-xl) {
-    margin-left: 15px;
-  }
+
   .lang__btn {
     border: none;
     background-color: $colorWhite;
@@ -155,7 +165,4 @@ button:hover {
   display: flex;
   background-color: $colorWhite;
   list-style: none;
-}
-.menu__item {
-  margin: auto;
 }

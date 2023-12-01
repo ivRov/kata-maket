@@ -1,23 +1,31 @@
 .flex-box2 {
   @media (min-width: $screen-xl) {
+    display: block;
     width: 80%;
     margin-left: 50px;
   }
 }
 .navbar__header-block {
   display: flex;
+
   .highlight {
     height: 40px;
     margin-block: auto;
     margin-left: -16px;
     padding-right: $px16;
     @media (min-width: $screen-md) {
-      margin-left: -30px;
+      margin-left: -24px;
     }
   }
   .navbar__header {
     font-weight: $bold;
     font-size: 28px;
+    @media (min-width: $screen-md) {
+      margin-left: 20px;
+    }
+    @media (min-width: $screen-xl) {
+      margin-left: 34px;
+    }
   }
 }
 
@@ -25,6 +33,9 @@
   display: flex;
   justify-content: space-between;
   overflow-x: scroll;
+  @media (min-width: $screen-md) {
+    margin-left: 16px;
+  }
   @media (min-width: $screen-xl) {
     flex-wrap: wrap;
     margin-left: 16px;
@@ -35,9 +46,14 @@
     color: $colorGray;
     white-space: nowrap;
     padding: 8px 16px;
+    margin-top: 5px;
+    @media (min-width: $screen-xl) {
+      min-width: 115px;
+    }
   }
-  .navbar--active {
-    border: 2px solid #b8ffec;
+  .navbar_active {
+    border: 1px solid $colorHighlight;
     border-radius: 6px;
+    background-color: $colorWhite;
   }
 }
